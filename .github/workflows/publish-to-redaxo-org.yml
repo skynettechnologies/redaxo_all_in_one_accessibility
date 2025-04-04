@@ -1,0 +1,19 @@
+name: Publish to REDAXO.org
+
+on:
+  release:
+    types:
+      - published
+
+jobs:
+  redaxo_publish:
+    runs-on: windows-latest
+    steps:
+      - uses: actions/checkout@v3
+      - uses: FriendsOfREDAXO/installer-action@v1
+        with:
+          REDAXO_USERNAME: ${{ secrets.REDAXO_USERNAME }}
+          REDAXO_API_KEY: ${{ secrets.REDAXO_API_KEY }}
+          DESCRIPTION: 'Quick Web Accessibility Implementation with All In One Accessibility!'
+          VERSION: '1.0.0'
+

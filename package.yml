@@ -1,0 +1,19 @@
+package: allinoneaccessibility
+version: '1.0.0'
+author: 'Rajesh Bhimani'
+description: Quick Web Accessibility Implementation with All In One Accessibility!
+supportpage: https://github.com/skynettechnologies
+
+page:
+    title: 'translate:allinoneaccessibility_title'
+    subpages:
+        config: { title: 'translate:allinoneaccessibility_title' }
+    perm: allinoneaccessibility[config]
+    pjax: true
+    icon: rex-icon fa-universal-access
+
+requires:
+    php:
+        version: '>=8.1'
+        extensions: [ctype]
+    redaxo: ^5.16.0
